@@ -1,0 +1,37 @@
+body{
+    background-color: aqua;
+    color: white;
+    margin:45px;
+}
+
+h1{
+    background-color: rgb(26, 1, 1);
+}
+
+*{
+    margin: 0;
+        padding: 0
+    }
+
+    .now{
+        color: rgb(238, 37, 37);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .my-name{
+        background-color:blue;
+        padding: 20px;
+        margin:30px;
+        height: 200px;
+        width: 200px;
+    }
+
+    #name{
+        color: rgb(24, 1, 1);
+    }
+    h2,h3,h4,h5{
+        background-color:black;
+        margin: 20px;
+    }
+
+    
