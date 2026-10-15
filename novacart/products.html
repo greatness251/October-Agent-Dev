@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the NovaCart product catalogue.">
+  <title>All Products | NovaCart</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="announcement-bar"><p>Free delivery on orders over ₦100,000</p></div>
+    <div class="header-main">
+      <a class="site-logo" href="index.html">NovaCart</a>
+      <form class="search-form" action="products.html" method="get" role="search">
+        <label for="site-search">Search products</label>
+        <input id="site-search" name="q" type="search" placeholder="Search for products">
+        <button type="submit">Search</button>
+      </form>
+      <nav class="utility-nav" aria-label="Account and shopping">
+        <a href="#account">Account</a>
+        <a href="cart.html">Cart <span class="cart-count">(2)</span></a>
+      </nav>
+    </div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" aria-current="page">All products</a></li>
+        <li><a href="products.html?category=audio">Audio</a></li>
+        <li><a href="products.html?category=wearables">Wearables</a></li>
+        <li><a href="products.html?category=accessories">Accessories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="catalogue-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">All products</li>
+      </ol>
+    </nav>
+
+    <header class="page-heading">
+      <p class="eyebrow">The NovaCart collection</p>
+      <h1>All products</h1>
+      <p>Browse everyday tech and accessories for your work, study, and downtime.</p>
+    </header>
+
+    <div class="catalogue-layout">
+      <aside class="filter-sidebar" aria-labelledby="filter-title">
+        <h2 id="filter-title">Filter products</h2>
+        <form action="products.html" method="get" class="filter-form">
+          <fieldset>
+            <legend>Category</legend>
+            <label><input type="checkbox" name="category" value="audio"> Audio</label>
+            <label><input type="checkbox" name="category" value="wearables"> Wearables</label>
+            <label><input type="checkbox" name="category" value="accessories"> Accessories</label>
+          </fieldset>
+          <fieldset>
+            <legend>Price range</legend>
+            <label><input type="radio" name="price" value="under-25000"> Under ₦25,000</label>
+            <label><input type="radio" name="price" value="25000-50000"> ₦25,000–₦50,000</label>
+            <label><input type="radio" name="price" value="over-50000"> Over ₦50,000</label>
+          </fieldset>
+          <button class="button" type="submit">Apply filters</button>
+          <a href="products.html">Clear filters</a>
+        </form>
+      </aside>
+
+      <section class="catalogue-results" aria-labelledby="results-title">
+        <div class="catalogue-toolbar">
+          <p id="results-title"><strong>8 products</strong> found</p>
+          <div class="sort-control">
+            <label for="sort-products">Sort by</label>
+            <select id="sort-products" name="sort">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <a href="product.html?item=wireless-headphones"><img src="https://placehold.co/600x500?text=Wireless+Headphones" alt="Wireless over-ear headphones"></a>
+            <p class="product-category">Audio</p>
+            <h2><a href="product.html?item=wireless-headphones">Nova Wireless Headphones</a></h2>
+            <p class="product-description">Comfortable listening for work and downtime.</p>
+            <p class="product-price">₦48,500</p>
+            <a class="button" href="product.html?item=wireless-headphones">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=smartwatch"><img src="https://placehold.co/600x500?text=Smartwatch" alt="Black smartwatch"></a>
+            <p class="product-category">Wearables</p>
+            <h2><a href="product.html?item=smartwatch">Pulse Smartwatch</a></h2>
+            <p class="product-description">Keep useful daily information close at hand.</p>
+            <p class="product-price">₦62,000</p>
+            <a class="button" href="product.html?item=smartwatch">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=backpack"><img src="https://placehold.co/600x500?text=Everyday+Backpack" alt="Dark everyday backpack"></a>
+            <p class="product-category">Accessories</p>
+            <h2><a href="product.html?item=backpack">Everyday Backpack</a></h2>
+            <p class="product-description">Carry your laptop and essentials with ease.</p>
+            <p class="product-price">₦35,000</p>
+            <a class="button" href="product.html?item=backpack">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=usb-c-hub"><img src="https://placehold.co/600x500?text=USB-C+Hub" alt="Compact multiport USB-C hub"></a>
+            <p class="product-category">Accessories</p>
+            <h2><a href="product.html?item=usb-c-hub">Compact USB-C Hub</a></h2>
+            <p class="product-description">Connect more of the devices you rely on.</p>
+            <p class="product-price">₦19,500</p>
+            <a class="button" href="product.html?item=usb-c-hub">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=portable-speaker"><img src="https://placehold.co/600x500?text=Portable+Speaker" alt="Portable Bluetooth speaker"></a>
+            <p class="product-category">Audio</p>
+            <h2><a href="product.html?item=portable-speaker">Mini Bluetooth Speaker</a></h2>
+            <p class="product-description">Bring your favourite audio along.</p>
+            <p class="product-price">₦27,000</p>
+            <a class="button" href="product.html?item=portable-speaker">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=wireless-mouse"><img src="https://placehold.co/600x500?text=Wireless+Mouse" alt="Wireless computer mouse"></a>
+            <p class="product-category">Accessories</p>
+            <h2><a href="product.html?item=wireless-mouse">Wireless Mouse</a></h2>
+            <p class="product-description">A simple companion for your workspace.</p>
+            <p class="product-price">₦12,500</p>
+            <a class="button" href="product.html?item=wireless-mouse">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=charging-stand"><img src="https://placehold.co/600x500?text=Charging+Stand" alt="Desktop charging stand"></a>
+            <p class="product-category">Accessories</p>
+            <h2><a href="product.html?item=charging-stand">Desktop Charging Stand</a></h2>
+            <p class="product-description">Keep your device upright while it charges.</p>
+            <p class="product-price">₦16,000</p>
+            <a class="button" href="product.html?item=charging-stand">View product</a>
+          </article>
+          <article class="product-card">
+            <a href="product.html?item=fitness-band"><img src="https://placehold.co/600x500?text=Fitness+Band" alt="Fitness tracking band"></a>
+            <p class="product-category">Wearables</p>
+            <h2><a href="product.html?item=fitness-band">Active Fitness Band</a></h2>
+            <p class="product-description">A lightweight wearable for everyday activity.</p>
+            <p class="product-price">₦29,000</p>
+            <a class="button" href="product.html?item=fitness-band">View product</a>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Product pages">
+          <a href="products.html" aria-current="page">1</a>
+          <a href="products.html?page=2">2</a>
+          <a href="products.html?page=2" aria-label="Next page">Next &rarr;</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <section><h2>NovaCart</h2><p>Everyday essentials for work, learning, and life.</p></section>
+      <nav aria-label="Shop"><h2>Shop</h2><ul><li><a href="products.html">All products</a></li><li><a href="products.html?category=audio">Audio</a></li><li><a href="products.html?category=wearables">Wearables</a></li></ul></nav>
+      <nav aria-label="Support"><h2>Support</h2><ul><li><a href="#contact">Contact us</a></li><li><a href="#delivery">Delivery information</a></li><li><a href="#returns">Returns</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 NovaCart. Learning project demonstration.</p><p><a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></p></div>
+  </footer>
+</body>
+</html>
