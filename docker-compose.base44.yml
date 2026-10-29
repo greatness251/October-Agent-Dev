@@ -1,0 +1,29 @@
+# Base44 dev environment for this repo.
+# This repo is static HTML/CSS plus standalone Python practice scripts, so the
+# only runnable "app" is the static site, served from the cloned source with a
+# live-reloading dev server (see scripts/dev-server.mjs).
+services:
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    command: ["node", "scripts/dev-server.mjs"]
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - ENTRY_PATH=/novacart/index.html
+      - BASE44_PREVIEW_MODE
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:3000/novacart/index.html || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    restart: on-failure
+    labels:
+      base44.project: "NovaCart site"
+      base44.kind: web
+      base44.port: 3000
